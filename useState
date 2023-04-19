@@ -1,0 +1,35 @@
+//useState hook
+// [currentState,Function to change the state]=useState(initial State);
+
+
+import './App.css';
+import {useState} from 'react';
+
+function App() {
+
+
+  let val=10;
+  let [counter,setCounter]=useState(val);
+
+  let increaseCounter=()=>{
+    setCounter(counter+1);
+  }
+
+  let decreaseCounter=()=>{
+    setCounter(counter-1);
+  }
+
+  return (
+   <div className="App">
+    <h1>useState</h1>
+    <h2 style={{color:"red"}}>counter={counter}</h2>
+    <button onClick={increaseCounter}>Increase</button>
+    <button onClick={decreaseCounter}>Decrease</button>
+   </div>
+  );
+}
+
+export default App;
+
+
+
