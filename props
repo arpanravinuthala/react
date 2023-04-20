@@ -1,0 +1,58 @@
+// props
+
+import './App.css';
+// import {useState} from 'react';
+import Parent from './components/Parent/Parent'
+
+function App() {
+
+  let languages=['Java','Python','C','C++'];
+  let lang='C';
+  let details={
+    name:"arpan",
+    age:"20",
+    course:"Btech",
+    department:"cse"
+  }
+
+  return (
+   <div className="App">
+    {/* <h1>array</h1> */}
+    {/* {
+      languages.map((val,index)=>
+      <Parent data={val} key={index} />)
+    } */}
+    {/* <h1>single variable</h1>
+    <Parent data={lang} /> */}
+
+    <h1>Object</h1>
+    <Parent data1={details} />
+  </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+import './Parent.css';
+
+function Parent(props) {
+  return (
+    <div className="parent">
+    {/* <div>{props.data}</div> */}
+        <h3>{props.data1.name}</h3>
+        <h3>{props.data1.age}</h3>
+        <h3>{props.data1.course}</h3>
+        <h3>{props.data1.department}</h3>
+    </div>
+  )
+}
+
+export default Parent;
